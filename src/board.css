@@ -1,0 +1,113 @@
+.playerPoints {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: black;
+}
+
+.monsterPoints {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: black;
+}
+
+.pointsWon {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+
+.board {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: 600px;
+  height: 300px;
+}
+
+.player {
+  background: url('./assets/player.png') center/contain no-repeat;
+  width: 80px;
+  height: 100px;
+}
+
+.player-bar {
+  position: relative;
+  background: url('./assets/bar.png') left/contain no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+.monster-bar {
+  position: relative;
+  background: url('./assets/bar.png') right/contain no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+.monster {
+  background: url('./assets/monster.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+.button {
+  background: url('./assets/button.png') center/contain no-repeat;
+  align-self: flex-end;
+  flex-grow: 2;
+  height: 37px;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.dice-1 {
+  background: url('./assets/one.png') center/contain no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-2 {
+  background: url('./assets/two.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-3 {
+  background: url('./assets/three.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-4 {
+  background: url('./assets/four.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-5 {
+  background: url('./assets/five.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-6 {
+  background: url('./assets/six.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
