@@ -1,0 +1,45 @@
+.dice-1 {
+  background: url('./assets/one.png') center/contain no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-2 {
+  background: url('./assets/two.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-3 {
+  background: url('./assets/three.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-4 {
+  background: url('./assets/four.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-5 {
+  background: url('./assets/five.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.dice-6 {
+  background: url('./assets/six.png') center/contain no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}

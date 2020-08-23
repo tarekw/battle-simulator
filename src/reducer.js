@@ -1,3 +1,5 @@
+import * as constants from './constants'
+
 const initialState = {
   hitFor: 'none',
   winner: 'none',
@@ -45,23 +47,27 @@ const attack = state => {
     damage = Math.abs(turnData.playerScore - turnData.monsterScore);
   }
 
+  let newState = {
+    ...state,
+    damage,
+    playerDiceTop: turnData.playerDiceTop,
+    playerDiceBottom: turnData.playerDiceBottom,
+    monsterDiceTop: turnData.monsterDiceTop,
+    monsterDiceBottom: turnData.monsterDiceBottom
+  }
+
   if (turnData.playerScore > turnData.monsterScore) {
     if (state.monsterPoints - damage <= 0) {
       return {
         ...state,
         monsterPoints: 0,
-        winner: 'player',
+        winner: constants.PLAYER,
       }
     } else {
       return {
-        ...state,
-        hitFor: 'player',
-        monsterPoints: state.monsterPoints - damage,
-        damage,
-        playerDiceTop: turnData.playerDiceTop,
-        playerDiceBottom: turnData.playerDiceBottom,
-        monsterDiceTop: turnData.monsterDiceTop,
-        monsterDiceBottom: turnData.monsterDiceBottom
+        ...newState,
+        hitFor: constants.PLAYER,
+        monsterPoints: state.monsterPoints - damage
       }
     }
   } else {
@@ -69,18 +75,13 @@ const attack = state => {
       return {
         ...state,
         playerPoints: 0,
-        winner: 'monster'
+        winner: constants.MONSTER
       }
     } else {
       return {
-        ...state,
-        hitFor: 'monster',
-        damage,
-        playerPoints: state.playerPoints - damage,
-        playerDiceTop: turnData.playerDiceTop,
-        playerDiceBottom: turnData.playerDiceBottom,
-        monsterDiceTop: turnData.monsterDiceTop,
-        monsterDiceBottom: turnData.monsterDiceBottom
+        ...newState,
+        hitFor: constants.MONSTER,
+        playerPoints: state.playerPoints - damage
       }
     }
   }
@@ -99,6 +100,7 @@ const reducer = (state, action) => {
 
 export {
   reducer as default,
+  attack,
   initialState,
   getBarColor,
 }
